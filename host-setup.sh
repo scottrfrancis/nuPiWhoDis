@@ -47,6 +47,19 @@ touch ssh
 # (to enable ssh)
 popd
 
+# need to create default user and password
+## generate encrypted password on host:
+openssl "<cleartext-password>" -6 -stdin
+## copy the output
+
+## then create the userconf file
+vim userconf
+# and add
+<username>:<encrpyted-password>
+
+# set hostname
+echo "<desired-hostname>" >> hostname
+
 # unmount the disk
 diskutil eject /dev/diskN
 
