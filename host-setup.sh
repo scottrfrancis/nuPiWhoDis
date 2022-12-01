@@ -49,7 +49,7 @@ popd
 
 # need to create default user and password
 ## generate encrypted password on host:
-openssl "<cleartext-password>" -6 -stdin
+echo "<cleartext-password>" | openssl passwd -6 -stdin
 ## copy the output
 
 ## then create the userconf file
